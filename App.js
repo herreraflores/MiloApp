@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     
   },
   tasksWrapper: { 
-    paddingTop: 60,
+    paddingTop: 69,
     paddingHorizontal: 20, 
 
   },
