@@ -1,23 +1,45 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {Image} from 'react-native' ;
+import Task from './components/Task';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>APPLE.</Text>
-      <Image source={{uri: 'https://w7.pngwing.com/pngs/973/255/png-transparent-red-apple-apple-fruit-apple-natural-foods-food-grocery-store-thumbnail.png'}}
-       style={{width: 400, height: 400}} />
-      <StatusBar style="auto" />
-    </View>
+        {/*Today's Tasks */}
+
+      <View style={styles.tasksWrapper}>
+        <Text style={styles.sectionTitle}>Today's tasks</Text>
+
+        <View style={styles.items}>  
+        {/*TASKS HERE*/}
+          <Task />
+        </View>
+          
+      </View>
+  
+  </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#884DFF',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#d8bd9a',
+    
   },
+  tasksWrapper: { 
+    paddingTop: 60,
+    paddingHorizontal: 20, 
+
+  },
+  
+    
+  sectionTitle: { 
+    fontSize: 34,
+    fontWieght: 'bold'
+
+
+  },
+  items: {},
 });
